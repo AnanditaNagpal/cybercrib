@@ -54,3 +54,71 @@ footer {
 .dark-mode header, .dark-mode footer {
     background-color: #111;
 }
+
+
+/* Theme switch toggle */
+.switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+body.dark-mode a {
+  color: #90caf9;
+}
+
+/* Intro section styling */
+.intro {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out;
+}
+.profile-pic:hover {
+  transform: scale(1.1);
+}
